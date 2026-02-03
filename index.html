@@ -4,26 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeJS - Your Functional Cooking Companion</title>
-
-    <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header section -->
-    <header>
-        <h1>🍳 RecipeJS</h1>
-        <p>Your Functional Cooking Companion</p>
-    </header>
+<header>
+    <h1>🍳 RecipeJS</h1>
+    <p>Your Functional Cooking Companion</p>
+</header>
 
-    <!-- Main section -->
-    <main>
-        <div id="recipe-container">
-            <!-- Recipe cards will be rendered here by JavaScript -->
+<main>
+
+    <!-- PART 2: FILTER & SORT CONTROLS -->
+    <section class="controls">
+
+        <div class="filter-group">
+            <h3>Filter by Difficulty</h3>
+            <div class="button-group">
+                <button class="filter-btn active" data-filter="all">Show All</button>
+                <button class="filter-btn" data-filter="easy">Easy</button>
+                <button class="filter-btn" data-filter="medium">Medium</button>
+                <button class="filter-btn" data-filter="hard">Hard</button>
+                <button class="filter-btn" data-filter="quick">Quick (&lt; 30 min)</button>
+            </div>
         </div>
-    </main>
 
-    <!-- Link JavaScript file -->
-    <script src="app.js"></script>
+        <div class="sort-group">
+            <h3>Sort by</h3>
+            <div class="button-group">
+                <button class="sort-btn active" data-sort="none">Default</button>
+                <button class="sort-btn" data-sort="name">Name (A–Z)</button>
+                <button class="sort-btn" data-sort="time">Time</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PART 1: RECIPE CONTAINER -->
+    <div id="recipe-container">
+        <!-- Recipe cards will be rendered here by JavaScript -->
+    </div>
+
+</main>
+
+<script src="app.js"></script>
 </body>
 </html>

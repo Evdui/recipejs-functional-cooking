@@ -1,10 +1,11 @@
-/* Reset and Base Styles */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f5f5;
@@ -12,13 +13,12 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -31,14 +31,45 @@ header p {
     opacity: 0.9;
 }
 
-/* Main Container */
+/* MAIN */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* Recipe Container - Flexbox Grid */
+/* CONTROLS */
+.controls {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.filter-btn,
+.sort-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.sort-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+/* RECIPE GRID */
 #recipe-container {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +77,7 @@ main {
     justify-content: center;
 }
 
-/* Recipe Card */
+/* RECIPE CARD */
 .recipe-card {
     background: white;
     border-radius: 12px;
@@ -56,33 +87,24 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
 .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Recipe Card Content */
 .recipe-card h3 {
     color: #667eea;
-    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .recipe-meta {
     display: flex;
     gap: 1rem;
-    margin: 0.75rem 0;
     font-size: 0.9rem;
-    color: #666;
+    margin: 0.75rem 0;
 }
 
-.recipe-card p {
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Difficulty Badge */
+/* DIFFICULTY BADGES */
 .difficulty {
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
